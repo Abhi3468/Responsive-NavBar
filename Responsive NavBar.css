@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  body {
+    height: 100vh;
+    background-color: black;
+    background-image: url(https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position: center;
+    background-size: cover;
+}
+
+li{
+    list-style: none;
+}
+
+p{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: cornsilk;
+    color: white;
+    font-size: medium;
+}
+
+a:hover{
+    color: rgb(9, 10, 10);
+}
+
+.NavBar .Togglebtn:hover{
+    color:rgb(9, 10, 10);
+
+}
+
+header{
+    position: relative;
+    padding: 0 2rem;
+}
+.NavBar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content:  space-between;
+    gap:  3rem;
+}
+.NavBar-logo{
+    color: aliceblue;
+}
+.NavBar-logo a{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.NavBar .links{
+    display: flex;
+    gap: 3rem;
+}
+.NavBar .Togglebtn{
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.Action_Button{
+background-color: rgb(226, 113, 76);
+color: azure;
+padding: 0.5rem 2.5rem;
+border: none;
+outline: none;
+border-radius: 20px;
+font-size: 0.8rem;
+font-weight: bold;
+cursor: pointer;
+transition: scale 0.2 ease;
+}
+
+.Action_Button:hover{
+    scale: 0.95;
+    color: #0a0a0a;
+}
+
+.Action_Button:active{
+    scale: 0.95;
+}
+
+/* DropdownMenu*/
+.DropdownMenu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(18px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.DropdownMenu.open{
+height: 265px;
+}
+.DropdownMenu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.DropdownMenu .Action_Button {
+    width: 280px;
+    display: flex;
+    justify-content: center;
+}
+
+section#Hi{
+    height: calc(100vh -  60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #fff;
+    
+}
+
+.h1{
+    font-weight: bold;
+    margin-bottom: 4rem;
+}
+
+/*Responsiveness Properties*/
+@media(max-width: 992px){
+    .NavBar .links,
+    .NavBar .Action_Button{
+        display: none;
+    }
+    
+    .NavBar .Togglebtn{
+        display: block;
+    }
+
+    .DropdownMenu{
+        display: block;
+    }
+
+}
+
+@media(max-width: 576px){
+.DropdownMenu{
+    left: 2rem;
+    width: unset;
+}
+
+}
